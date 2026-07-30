@@ -1,0 +1,650 @@
+/* ============================================
+   Bioparque Yasuní - Hoja de estilos
+   Taller CI/CD - PUCE
+   ============================================ */
+
+:root {
+    --selva: #1b4332;
+    --selva-claro: #2d6a4f;
+    --hoja: #52b788;
+    --tierra: #774936;
+    --sol: #e9a11c;
+    --crema: #f6f4ee;
+    --arena: #e8e0d0;
+    --carbon: #26221d;
+    --gris: #5c574f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+    background: var(--crema);
+    color: var(--carbon);
+    line-height: 1.65;
+}
+
+/* ---------- Encabezado ---------- */
+
+header {
+    background: var(--selva);
+    color: var(--crema);
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo .icono {
+    font-size: 30px;
+}
+
+.logo span {
+    color: var(--sol);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--crema);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color .2s;
+}
+
+nav a:hover,
+nav a.activo {
+    border-bottom-color: var(--sol);
+}
+
+/* ---------- Banner ---------- */
+
+.banner {
+    height: 460px;
+    background: linear-gradient(rgba(27, 67, 50, .55), rgba(27, 67, 50, .78)),
+                url("https://images.unsplash.com/photo-1474314170901-f351b68f544f?w=1400") center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--crema);
+    padding: 0 20px;
+}
+
+.banner h1 {
+    font-size: 52px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.banner p {
+    font-size: 19px;
+    max-width: 640px;
+    margin-bottom: 28px;
+}
+
+.banner-botones {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ---------- Botones ---------- */
+
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+    background: var(--sol);
+    color: var(--carbon);
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
+    transition: transform .15s, background .2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background: #d18f12;
+}
+
+.btn-borde {
+    background: transparent;
+    border: 2px solid var(--crema);
+    color: var(--crema);
+}
+
+.btn-borde:hover {
+    background: var(--crema);
+    color: var(--selva);
+}
+
+/* ---------- Secciones ---------- */
+
+section {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+h2 {
+    font-size: 34px;
+    font-weight: 400;
+    color: var(--selva);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: var(--gris);
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---------- Franja destacada ---------- */
+
+.franja {
+    background: var(--selva-claro);
+    color: var(--crema);
+    max-width: 100%;
+}
+
+.franja h2 {
+    color: var(--crema);
+}
+
+.destacados {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.destacado {
+    text-align: center;
+}
+
+.destacado span {
+    display: block;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--sol);
+    line-height: 1;
+}
+
+.destacado small {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ---------- Tarjetas genéricas ---------- */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .1);
+    transition: transform .22s, box-shadow .22s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .16);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body {
+    padding: 18px;
+}
+
+.card h3 {
+    color: var(--selva);
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: var(--gris);
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* ---------- Acceso rápido (botones home) ---------- */
+
+.accesos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.acceso {
+    background: #fff;
+    border-radius: 6px;
+    padding: 30px 22px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .1);
+    text-decoration: none;
+    color: var(--carbon);
+    transition: transform .2s, box-shadow .2s;
+}
+
+.acceso:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .16);
+}
+
+.acceso .icono {
+    font-size: 42px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.acceso h3 {
+    color: var(--selva);
+    margin-bottom: 6px;
+}
+
+.acceso p {
+    color: var(--gris);
+    font-size: 14px;
+}
+
+/* ---------- Animales: categorías y filtros ---------- */
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+}
+
+.filtro {
+    padding: 9px 20px;
+    border: 1px solid var(--selva-claro);
+    border-radius: 22px;
+    background: transparent;
+    color: var(--selva-claro);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all .2s;
+}
+
+.filtro:hover {
+    background: var(--hoja);
+    color: #fff;
+    border-color: var(--hoja);
+}
+
+.filtro.activo {
+    background: var(--selva-claro);
+    color: #fff;
+    border-color: var(--selva-claro);
+}
+
+.animal .etiqueta {
+    display: inline-block;
+    background: var(--hoja);
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.animal .ficha {
+    list-style: none;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.animal .ficha li {
+    padding: 3px 0;
+    border-bottom: 1px solid var(--arena);
+    color: var(--gris);
+}
+
+.animal .ficha li:last-child {
+    border-bottom: none;
+}
+
+.animal .ficha strong {
+    color: var(--carbon);
+}
+
+/* ---------- Servicios ---------- */
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.servicio {
+    background: #fff;
+    border-left: 4px solid var(--sol);
+    border-radius: 4px;
+    padding: 22px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+}
+
+.servicio .icono {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.servicio h3 {
+    color: var(--selva);
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.servicio p {
+    color: var(--gris);
+    font-size: 14px;
+}
+
+/* ---------- Tabla (horarios y precios) ---------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .1);
+    margin-top: 20px;
+}
+
+th {
+    background: var(--selva);
+    color: var(--crema);
+    padding: 14px;
+    text-align: left;
+}
+
+td {
+    padding: 13px 14px;
+    border-bottom: 1px solid var(--arena);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:nth-child(even) td {
+    background: #faf8f3;
+}
+
+/* ---------- Sección educativa ---------- */
+
+.edu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 22px;
+}
+
+.edu-card {
+    background: #fff;
+    border-radius: 6px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+}
+
+.edu-card .icono {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.edu-card h3 {
+    color: var(--selva);
+    margin-bottom: 8px;
+    font-size: 19px;
+}
+
+.edu-card p {
+    color: var(--gris);
+    font-size: 14px;
+}
+
+.dato-curioso {
+    background: var(--arena);
+    border-radius: 6px;
+    padding: 22px 26px;
+    margin-top: 26px;
+    font-size: 16px;
+    text-align: center;
+    color: var(--carbon);
+}
+
+/* ---------- Contacto ---------- */
+
+.contacto-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.formulario {
+    background: #fff;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .1);
+}
+
+.campo {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: var(--selva);
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--arena);
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #fdfcf9;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--sol);
+    border-color: transparent;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.mensaje {
+    margin-top: 16px;
+    padding: 13px;
+    border-radius: 4px;
+    display: none;
+    font-size: 15px;
+}
+
+.mensaje.ok {
+    background: #dbefe4;
+    color: #1b5e37;
+    border-left: 4px solid var(--selva-claro);
+    display: block;
+}
+
+.mensaje.error {
+    background: #f6ded4;
+    color: #8a3c1c;
+    border-left: 4px solid var(--tierra);
+    display: block;
+}
+
+.info-contacto {
+    background: #fff;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .1);
+}
+
+.info-contacto h3 {
+    color: var(--selva);
+    margin-bottom: 14px;
+}
+
+.info-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    align-items: flex-start;
+}
+
+.info-item .icono {
+    font-size: 22px;
+}
+
+.info-item p {
+    color: var(--gris);
+    font-size: 14px;
+}
+
+.redes {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.redes a {
+    display: inline-block;
+    background: var(--selva);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background .2s;
+}
+
+.redes a:hover {
+    background: var(--selva-claro);
+}
+
+.mapa {
+    margin-top: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .1);
+    height: 260px;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ---------- Pie ---------- */
+
+footer {
+    background: var(--carbon);
+    color: #b8b1a4;
+    text-align: center;
+    padding: 34px 20px;
+    margin-top: 50px;
+}
+
+footer .logo {
+    justify-content: center;
+    color: var(--crema);
+    margin-bottom: 12px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 3px 0;
+}
+
+/* ---------- Responsivo ---------- */
+
+@media (max-width: 780px) {
+    header {
+        flex-direction: column;
+    }
+
+    .banner h1 {
+        font-size: 34px;
+    }
+
+    .contacto-cols {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    .destacados {
+        gap: 30px;
+    }
+}

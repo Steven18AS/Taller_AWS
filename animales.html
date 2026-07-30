@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bioparque Yasuní - Animales</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<header>
+    <div class="logo"><span class="icono">&#129443;</span> BIOPARQUE <span>YASUNÍ</span></div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="animales.html" class="activo">Animales</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="educacion.html">Educación</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h2>Nuestros animales</h2>
+    <p class="subtitulo">Conoce las especies del Bioparque organizadas por categoría. Usa los filtros para explorar cada grupo.</p>
+
+    <div class="filtros">
+        <button class="filtro activo" onclick="filtrarAnimales('todos', this)">Todos</button>
+        <button class="filtro" onclick="filtrarAnimales('mamifero', this)">Mamíferos</button>
+        <button class="filtro" onclick="filtrarAnimales('ave', this)">Aves</button>
+        <button class="filtro" onclick="filtrarAnimales('reptil', this)">Reptiles</button>
+        <button class="filtro" onclick="filtrarAnimales('acuatico', this)">Acuáticos</button>
+    </div>
+
+    <div class="grid">
+
+        <!-- MAMÍFEROS -->
+        <div class="card animal" data-categoria="mamifero">
+            <img src="https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=600" alt="León">
+            <div class="card-body">
+                <span class="etiqueta">Mamífero</span>
+                <h3>León</h3>
+                <p>El rey de la sabana, conocido por su melena y su rugido que se escucha a kilómetros.</p>
+                <ul class="ficha">
+                    <li><strong>Hábitat:</strong> Sabanas y praderas africanas</li>
+                    <li><strong>Características:</strong> Vive en manadas, gran fuerza y velocidad</li>
+                    <li><strong>Alimentación:</strong> Carnívoro (cebras, antílopes, búfalos)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card animal" data-categoria="mamifero">
+            <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=600" alt="Elefante">
+            <div class="card-body">
+                <span class="etiqueta">Mamífero</span>
+                <h3>Elefante</h3>
+                <p>El animal terrestre más grande del planeta, de gran memoria e inteligencia.</p>
+                <ul class="ficha">
+                    <li><strong>Hábitat:</strong> Sabanas, bosques y selvas</li>
+                    <li><strong>Características:</strong> Trompa prensil, colmillos de marfil</li>
+                    <li><strong>Alimentación:</strong> Herbívoro (hierbas, hojas, frutos)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card animal" data-categoria="mamifero">
+            <img src="https://images.unsplash.com/photo-1547721064-da6cfb341d50?w=600" alt="Jirafa">
+            <div class="card-body">
+                <span class="etiqueta">Mamífero</span>
+                <h3>Jirafa</h3>
+                <p>El animal más alto del mundo, capaz de alcanzar las hojas más altas de los árboles.</p>
+                <ul class="ficha">
+                    <li><strong>Hábitat:</strong> Sabanas africanas</li>
+                    <li><strong>Características:</strong> Cuello largo, patrón único de manchas</li>
+                    <li><strong>Alimentación:</strong> Herbívoro (hojas de acacia)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card animal" data-categoria="mamifero">
+            <img src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=600" alt="Tigre">
+            <div class="card-body">
+                <span class="etiqueta">Mamífero</span>
+                <h3>Tigre</h3>
+                <p>El felino más grande, solitario y sigiloso, con su inconfundible pelaje rayado.</p>
+                <ul class="ficha">
+                    <li><strong>Hábitat:</strong> Selvas y bosques de Asia</li>
+                    <li><strong>Características:</strong> Nadador ágil, cazador nocturno</li>
+                    <li><strong>Alimentación:</strong> Carnívoro (ciervos, jabalíes)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- AVES -->
+        <div class="card animal" data-categoria="ave">
+            <img src="https://images.unsplash.com/photo-1611689342806-0863700ce1e4?w=600" alt="Águila">
+            <div class="card-body">
+                <span class="etiqueta">Ave</span>
+                <h3>Águila</h3>
+                <p>Ave rapaz de vista prodigiosa, símbolo de fuerza y libertad en muchas culturas.</p>
+                <ul class="ficha">
+                    <li><strong>Hábitat:</strong> Montañas y bosques altos</li>
+                    <li><strong>Características:</strong> Vista aguda, garras poderosas</li>
+                    <li><strong>Alimentación:</strong> Carnívoro (peces, roedores, aves)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACUÁTICOS -->
+        <div class="card animal" data-categoria="acuatico">
+            <img src="https://images.unsplash.com/photo-1607153333879-c174d265f1d2?w=600" alt="Delfín">
+            <div class="card-body">
+                <span class="etiqueta">Acuático</span>
+                <h3>Delfín</h3>
+                <p>Mamífero marino muy inteligente y sociable, conocido por su agilidad y sus saltos.</p>
+                <ul class="ficha">
+                    <li><strong>Hábitat:</strong> Océanos y mares templados</li>
+                    <li><strong>Características:</strong> Ecolocalización, vive en grupos</li>
+                    <li><strong>Alimentación:</strong> Carnívoro (peces, calamares)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- REPTILES -->
+        <div class="card animal" data-categoria="reptil">
+            <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=600" alt="Tortuga">
+            <div class="card-body">
+                <span class="etiqueta">Reptil</span>
+                <h3>Tortuga</h3>
+                <p>Reptil longevo protegido por su caparazón, símbolo de las Islas Galápagos.</p>
+                <ul class="ficha">
+                    <li><strong>Hábitat:</strong> Islas, ríos y zonas costeras</li>
+                    <li><strong>Características:</strong> Caparazón óseo, gran longevidad</li>
+                    <li><strong>Alimentación:</strong> Herbívoro (hierbas, frutas, cactus)</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="logo"><span class="icono">&#129443;</span> BIOPARQUE <span>YASUNÍ</span></div>
+    <p>Av. de los Guacamayos, km 8 vía al Tena - Ecuador</p>
+    <p>Abierto todos los días de 09:00 a 17:00</p>
+    <p>&copy; 2026 Bioparque Yasuní. Todos los derechos reservados.</p>
+</footer>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>

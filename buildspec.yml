@@ -1,0 +1,37 @@
+version: 0.2
+
+# ============================================================
+# Bioparque Yasuni - Especificacion de build para AWS CodeBuild
+# Taller CI/CD - PUCE
+#
+# Este archivo indica a CodeBuild que tome todos los archivos
+# del sitio (HTML, CSS, JS) y los entregue como artefacto para
+# que la etapa de despliegue los publique en el servidor IIS.
+# ============================================================
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - echo "Iniciando fase de instalacion"
+
+  pre_build:
+    commands:
+      - echo "Verificando archivos del sitio"
+      - ls -la
+
+  build:
+    commands:
+      - echo "No se requiere compilacion para un sitio estatico HTML/CSS/JS"
+      - echo "Build completado el `date`"
+
+  post_build:
+    commands:
+      - echo "Preparando artefactos para el despliegue"
+
+# Todos los archivos del repositorio se empaquetan como artefacto
+artifacts:
+  files:
+    - '**/*'
+  name: bioparque-sitio
